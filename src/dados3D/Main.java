@@ -148,7 +148,7 @@ public class Main extends JFrame {
 
     private void tirarAmbos() {
         tirarDado3();
-        Timer timer = new Timer(100, e -> tirarDado21());
+        Timer timer = new Timer(80, e -> tirarDado21());
         timer.setRepeats(false);
         timer.start();
     }
@@ -159,7 +159,7 @@ public class Main extends JFrame {
         Timer animacion = new Timer(80, e -> {
             panelDado.rotar();
             contador[0]++;
-            if (contador[0] >= 40) {
+            if (contador[0] >= 50) {
                 ((Timer) e.getSource()).stop();
                 int resultado = dado.tirar();
                 labelResultado.setText("Resultado: " + resultado);
@@ -217,9 +217,9 @@ class PanelDado3D extends JPanel {
         int alto = getHeight();
         int centroX = ancho / 2;
         int centroY = alto / 2;
-        double escala = Math.min(ancho, alto) / 3.5;
+        double escala = Math.min(ancho, alto) / 4.0;
 
-        double h = 0.7;
+        double h = 0.8;
         double[][] vertices = {
             {0, 1, -h}, {-Math.sqrt(3)/2, -0.5, -h}, {Math.sqrt(3)/2, -0.5, -h},
             {0, 1,  h}, {-Math.sqrt(3)/2, -0.5,  h}, {Math.sqrt(3)/2, -0.5,  h}
@@ -266,7 +266,7 @@ class PanelDado3D extends JPanel {
             Polygon p = new Polygon();
             for (int v : caras[idx]) p.addPoint(proyectados[v][0], proyectados[v][1]);
             float brillo = (float)(0.7 + 0.3 * (profundidad[idx] + 2) / 4);
-            brillo = Math.max(0.6f, Math.min(1.0f, brillo));
+            brillo = Math.max(0.7f, Math.min(1.0f, brillo));
             g2d.setColor(new Color((int)(255*brillo), (int)(255*brillo), (int)(255*brillo)));
             g2d.fillPolygon(p);
             g2d.setColor(new Color(40, 40, 40));
