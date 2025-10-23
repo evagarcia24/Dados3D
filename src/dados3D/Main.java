@@ -148,18 +148,19 @@ public class Main extends JFrame {
 
     private void tirarAmbos() {
         tirarDado3();
-        Timer timer = new Timer(80, e -> tirarDado21());
+        Timer timer = new Timer(70, e -> tirarDado21());
         timer.setRepeats(false);
         timer.start();
     }
 
     private void animarDado(final PanelDado3D panelDado, final JLabel labelResultado, final Dado dado) {
         labelResultado.setText("Girando...");
+        
         final int[] contador = {0};
-        Timer animacion = new Timer(80, e -> {
+        Timer animacion = new Timer(70, e -> {
             panelDado.rotar();
             contador[0]++;
-            if (contador[0] >= 50) {
+            if (contador[0] >= 40) {
                 ((Timer) e.getSource()).stop();
                 int resultado = dado.tirar();
                 labelResultado.setText("Resultado: " + resultado);
