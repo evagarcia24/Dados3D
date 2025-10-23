@@ -29,7 +29,7 @@ public class Main extends JFrame {
         panelPrincipal.setLayout(new BorderLayout(30, 30));
 
         JLabel titulo = new JLabel("JUEGO DE ROL - TIRADA DE DADOS", SwingConstants.CENTER);
-        titulo.setFont(new Font("Arial", Font.BOLD, 40));
+        titulo.setFont(new Font("Arial", Font.BOLD, 50));
         titulo.setForeground(Color.WHITE);
         titulo.setBorder(BorderFactory.createEmptyBorder(30, 20, 20, 20));
         panelPrincipal.add(titulo, BorderLayout.NORTH);
