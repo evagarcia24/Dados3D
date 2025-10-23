@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-
 public class Main extends JFrame {
 	private Dado dado3;
 	private Dado dado21;
@@ -174,4 +173,3 @@ public class Main extends JFrame {
 		});
 	}
 }
-

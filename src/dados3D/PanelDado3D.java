@@ -13,7 +13,7 @@ import java.awt.geom.Point2D;
 import javax.swing.JPanel;
 
 class PanelDado3D extends JPanel {
-	private String tipo; // "prisma" o "icosaedro"
+	private String tipo; // "prisma" o "Icosamonoedro (21 caras)"
 	private double rotX, rotY, rotZ;
 
 	public PanelDado3D(String tipo) {
@@ -109,7 +109,7 @@ class PanelDado3D extends JPanel {
 		}
 	}
 
-	// ⚪ ICOSAMONOEDRO → dado de 20 caras Para simular vale, 
+	// ⚪ Icosamonoedro → el dibujo son 20 caras (icosaedro) porque es mal facil de crear que uno de 21 
 	private void dibujarIcosaedro(Graphics2D g2d) {
 		double phi = (1 + Math.sqrt(5)) / 2;
 		double[][] vertices3D = { { -1, phi, 0 }, { 1, phi, 0 }, { -1, -phi, 0 }, { 1, -phi, 0 }, { 0, -1, phi },
