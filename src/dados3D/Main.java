@@ -99,10 +99,10 @@ public class Main extends JFrame {
         lblTitulo.setAlignmentX(Component.CENTER_ALIGNMENT);
         lblTitulo.setBorder(BorderFactory.createEmptyBorder(0, 0, 15, 0));
 
-        panelDadoVisual.setPreferredSize(new Dimension(320, 320));
+        panelDadoVisual.setPreferredSize(new Dimension(360, 360));
         panelDadoVisual.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        lblResultado.setFont(new Font("Arial", Font.BOLD, 28));
+        lblResultado.setFont(new Font("Arial", Font.BOLD, 30));
         lblResultado.setForeground(Color.WHITE);
         lblResultado.setAlignmentX(Component.CENTER_ALIGNMENT);
         lblResultado.setOpaque(true);
@@ -110,9 +110,9 @@ public class Main extends JFrame {
         lblResultado.setBorder(BorderFactory.createEmptyBorder(12, 35, 12, 35));
 
         panel.add(lblTitulo);
-        panel.add(Box.createVerticalStrut(10));
+        panel.add(Box.createVerticalStrut(5));
         panel.add(panelDadoVisual);
-        panel.add(Box.createVerticalStrut(20));
+        panel.add(Box.createVerticalStrut(10));
         panel.add(lblResultado);
 
         return panel;
@@ -187,14 +187,14 @@ class PanelDado3D extends JPanel {
         this.tipo = tipo;
         this.rotX = 0.4;
         this.rotY = 0.5;
-        this.rotZ = 0.2;
+        this.rotZ = 0.3;
         setOpaque(false);
     }
 
     public void rotar() {
         rotX += 0.15;
         rotY += 0.18;
-        rotZ += 0.12;
+        rotZ += 0.14;
         repaint();
     }
 
